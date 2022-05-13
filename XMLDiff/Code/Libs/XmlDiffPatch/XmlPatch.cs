@@ -133,9 +133,11 @@ public class XmlPatch
                     if ( sourceReader is XmlTextReader ) {
                         enc = ((XmlTextReader)sourceReader).Encoding;
                     }
-                    else if ( sourceReader is XmlValidatingReader ) {
-                        enc = ((XmlValidatingReader)sourceReader).Encoding;
-                    }
+                    //NOTE:removed as obsolete. Not needed for my purpose, but possible one
+                    //else reliant on it
+                    //else if ( sourceReader is XmlValidatingReader ) {
+                    //    enc = ((XmlValidatingReader)sourceReader).Encoding;
+                    //}
                     else {
                         enc = Encoding.Unicode;
                     }
